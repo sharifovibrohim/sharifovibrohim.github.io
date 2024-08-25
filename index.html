@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Page with Bottom Navigation</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: #333;
+        }
+
+        .content {
+            flex: 1;
+            padding:3px;
+            overflow-y: auto;
+            background-color: #ffffff;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-image {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #222;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #444;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: #aaa;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            flex: 1;
+            padding: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a img {
+            width: 30                       px;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+
+        .navbar a:hover, 
+        .navbar a.active {
+            color: #ffa500;
+            background-color: #333;
+            border-radius: 10px;
+            transform: translateY(-5px);
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <img src="hmst.png" alt="Main Image" class="header-image">
+        <!-- Содержимое страниц, таких как Exchange, Mine и т.д. -->
+    </div>
+
+    <div class="navbar">
+        <a href="#exchange" class="active">
+            <img src="ex.png" alt="Exchange Icon"><br>Exchange
+        </a>
+        <a href="#mine">
+            <img src="mine.png" alt="Mine Icon"><br>Mine
+        </a>
+        <a href="#friends">
+            <img src="friend.png" alt="Friends Icon"><br>Friends
+        </a>
+        <a href="#earn">
+            <img src="earn.png" alt="Earn Icon"><br>Earn
+        </a>
+        <a href="#airdrop">
+            <img src="airdrop.png" alt="Airdrop Icon"><br>Airdrop
+        </a>
+    </div>
+
+</body>
+</html>
